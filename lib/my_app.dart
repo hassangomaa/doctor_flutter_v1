@@ -1,3 +1,4 @@
+import 'package:doctor_flutter_v1/presentation/submit_health_record/submit_health_record_view.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,9 +33,10 @@ class MyApp extends StatelessWidget {
           darkTheme: AppTheme.darkTheme(),
           debugShowCheckedModeBanner: false,
           themeMode: ThemeMode.light,
-          initialRoute: AppPage.splashScreen,
-          navigatorKey: AppRouter.navigatorKey,
-          onGenerateRoute: AppRouter.generateRoute,
+          home:  SubmitHealthRecordView(),
+          // initialRoute: AppPage.splashScreen,
+          // navigatorKey: AppRouter.navigatorKey,
+          // onGenerateRoute: AppRouter.generateRoute,
         );
       },
     );
