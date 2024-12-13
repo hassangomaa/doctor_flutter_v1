@@ -55,7 +55,6 @@ class DioHelper {
         ),
       ]);
     dio.interceptors.add(PrettyDioLogger(
-
       request: true,
       requestBody: true,
     ));

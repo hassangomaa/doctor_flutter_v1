@@ -17,11 +17,11 @@ class UserModelData {
   final String? role;
   final String? address;
   final String? location;
-  final dynamic? tall;
+  final dynamic tall;
   final String? birthDate;
   final String? nationalID;
-  final dynamic? blodType;
-  final dynamic? walkPlan;
+  final dynamic blodType;
+  final dynamic walkPlan;
   final dynamic weight;
   final dynamic bmi;
 
@@ -77,7 +77,7 @@ class UserModelData {
       birthDate: json['birth_date'] ?? "",
       nationalID: json['national_id'] ?? "",
       blodType: json['blood_type'] ?? "",
-      walkPlan: json['walk_plan'] ?? 0,
+      walkPlan: json['walk_plan'] ?? "",
       weight: json['weight'] ?? "",
       bmi: json['bmi'] ?? "",
     );

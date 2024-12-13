@@ -5,6 +5,7 @@
   "family": "Family",
   "password": "Password",
   "name": "Name",
+  "walkplan":"Daily Walking Rate",
   "address": "Address",
   "location": "Location",
   "healthRecord": "Health Record",

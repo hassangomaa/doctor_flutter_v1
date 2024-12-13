@@ -29,7 +29,7 @@ class PatientModelData extends Equatable {
   dynamic birth_date;
   dynamic blood_type;
   dynamic walk_plan;
-    dynamic weight;
+  dynamic weight;
   dynamic bmi;
   PatientModelData(
       {required this.id,
@@ -56,8 +56,7 @@ class PatientModelData extends Equatable {
       required this.blood_type,
       required this.walk_plan,
       required this.weight,
-      required this.bmi
-    });
+      required this.bmi});
 
   factory PatientModelData.fromJson(Map<String?, dynamic> json) {
     return PatientModelData(
@@ -93,7 +92,6 @@ class PatientModelData extends Equatable {
       walk_plan: json['walk_plan'] ?? 0,
       weight: json['weight'] ?? 0,
       bmi: json['bmi'] ?? 0,
-      
     );
   }
 

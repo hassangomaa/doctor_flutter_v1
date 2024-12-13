@@ -20,7 +20,6 @@ class HealthRecord extends StatelessWidget {
             style: AppStyle.textStyle20BoldKufram,
             color: AppColor.white),
       ),
-      
       body: ListView.builder(
         itemCount: healthRecordModel.length,
         itemBuilder: (context, index) {

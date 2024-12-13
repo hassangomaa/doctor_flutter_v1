@@ -149,17 +149,17 @@ class _SubmitHealthRecordViewState extends State<SubmitHealthRecordView> {
                       },
                     ),
                     const CustomDatePickerTextField(),
-                    // CustomTextFormFeild(
-                    //   text: AppText.treatmentPlan,
-                    //   controller: SubmitHealthRecordCubit.get(context)
-                    //       .treatmentPlanController,
-                    //   validator: (value) {
-                    //     if (value == null || value.isEmpty) {
-                    //       return 'Treatment plan is required';
-                    //     }
-                    //     return null;
-                    //   },
-                    // ),
+                    CustomTextFormFeild(
+                      text: AppText.treatmentPlan,
+                      controller: SubmitHealthRecordCubit.get(context)
+                          .treatmentPlanController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Treatment plan is required';
+                        }
+                        return null;
+                      },
+                    ),
                     CustomTextFormFeild(
                       text: AppText.walk_plan,
                       controller: SubmitHealthRecordCubit.get(context).workPlan,

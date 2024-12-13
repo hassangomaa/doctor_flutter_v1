@@ -42,12 +42,10 @@ class SubmitHealthRecordRepoImp extends SubmitHealthRecordRepo {
     required String walkPlan,
   }) async {
     try {
-      Response response = await DioHelper.postData
-      (
+      Response response = await DioHelper.postData(
           url:
               "https://health-care-sys.smartleadtech.com/api/patients/health-records",
-          data: 
-          {
+          data: {
             "blood_pressure": bloodPressure,
             "heart_rate": heartRate,
             "temperature": temperature,

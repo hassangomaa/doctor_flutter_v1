@@ -59,5 +59,4 @@ class DefaultFirebaseOptions {
     projectId: 'fypi-7a024',
     storageBucket: 'fypi-7a024.appspot.com',
   );
-
 }

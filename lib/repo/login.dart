@@ -8,13 +8,15 @@ import 'package:doctor_flutter_v1/core/network/end_point.dart';
 import 'package:doctor_flutter_v1/model/login_model.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
+import '../model/user/user_login_response_model/user_login_response_model.dart';
+
 abstract class LoginRepo {
-  Future<Either<Failures, LoginModel>> loginUser(String email, String password);
+  Future<Either<Failures, UserLoginResponseModel>> loginUser(String email, String password);
 }
 
 class LoginRepoImpl extends LoginRepo {
   @override
-  Future<Either<Failures, LoginModel>> loginUser(
+  Future<Either<Failures, UserLoginResponseModel>> loginUser(
       String email, String password) async {
     try {
       Response response = await DioHelper.postData(
@@ -26,7 +28,7 @@ class LoginRepoImpl extends LoginRepo {
         },
       );
 
-      return Right(LoginModel.fromJson(response.data));
+      return Right(UserLoginResponseModel.fromJson(response.data));
     } on DioException catch (dioError) {
       log(dioError.message.toString());
       log(dioError.response.toString());

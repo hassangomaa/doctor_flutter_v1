@@ -65,8 +65,7 @@ class ProfileCubit extends Cubit<ProfileState> {
     });
   }
 
-  Future<void> updateProfile({required BuildContext context}) async 
-  {
+  Future<void> updateProfile({required BuildContext context}) async {
     emit(ProfileLoadingState());
     var response = await profileRepo.updateProfile(
         name: userName.text,

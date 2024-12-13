@@ -42,14 +42,14 @@ class HealthRecordRepoImpl implements HealthRecordRepo {
   }
 
   @override
-  Future<Either<Failures, String>> submitHealthRecords(
-      {required String bloodPressure,
-      required String heartRate,
-      required String temperature,
-      required String treatmentPlan,
-      required double lat,
-      required double long,
-      }) async {
+  Future<Either<Failures, String>> submitHealthRecords({
+    required String bloodPressure,
+    required String heartRate,
+    required String temperature,
+    required String treatmentPlan,
+    required double lat,
+    required double long,
+  }) async {
     try {
       Response response = await DioHelper.postData(
           url: EndPoint.submitHealthRecords,
@@ -58,7 +58,7 @@ class HealthRecordRepoImpl implements HealthRecordRepo {
             "heart_rate": heartRate,
             "temperature": temperature,
             "treatment_plan": treatmentPlan,
-            "lat" :  lat, 
+            "lat": lat,
             "long": long,
           },
           token: CacheService.getString(key: AppCacheKey.token));

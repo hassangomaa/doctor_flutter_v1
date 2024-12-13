@@ -31,14 +31,11 @@ class _MessageScreenState extends State<MessageScreen> {
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
-      body: 
-      Padding(
-        padding: 
-        const EdgeInsets.all(8.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: FutureBuilder<ListContactUs>(
           future: getUserMdedicin(),
-          builder: (context, snapshot) 
-          {
+          builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: CircularProgressIndicator(),

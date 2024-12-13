@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
             );
             CacheService.setData(
               key: AppCacheKey.id,
-              value: state.loginModel.user.id,
+              value: state.loginModel.user?.id,
             );
 
             CacheService.setData(
@@ -33,9 +33,9 @@ class LoginScreen extends StatelessWidget {
             );
             CacheService.setData(
               key: AppCacheKey.role,
-              value: state.loginModel.user.role,
+              value: state.loginModel.user?.role,
             );
-            switch (state.loginModel.user.role) {
+            switch (state.loginModel.user?.role) {
               case "doctor":
                 context.pushNamedAndRemoveUntil(AppPage.doctorHomeLayout,
                     predicate: (_) => false);

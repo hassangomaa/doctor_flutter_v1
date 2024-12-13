@@ -6,6 +6,7 @@ import 'package:doctor_flutter_v1/repo/login.dart';
 import '../../core/services/cache/app_cache_key.dart';
 import '../../core/services/cache/cache_service.dart';
 import '../../core/utils/enums.dart';
+import '../../model/user/user_login_response_model/user_login_response_model.dart';
 
 part 'login_state.dart';
 
@@ -31,22 +32,20 @@ class LoginCubit extends Cubit<LoginState> {
   }
 
   Future<void> login() async {
-    if (formKey.currentState!.validate()) {
-      emit(LoginLoadingState());
+    emit(LoginLoadingState());
 
-      final response =
-          await _repo.loginUser(emailController.text, passwordController.text);
-      response.fold((error) {
-        emit(LoginErrorState(error.errorMessage));
-      }, (data) {
-        selectdRole = data.user.role;
-        CacheService.setData(
-          key: AppCacheKey.role,
-          value: data.user.role,
-        );
-        emit(LoginSuccessState(data));
-      });
-    }
+    final response =
+        await _repo.loginUser(emailController.text, passwordController.text);
+    response.fold((error) {
+      emit(LoginErrorState(error.errorMessage));
+    }, (data) {
+      selectdRole = data.user?.role;
+      CacheService.setData(
+        key: AppCacheKey.role,
+        value: data.user?.role,
+      );
+      emit(LoginSuccessState(data));
+    });
   }
 
   @override
