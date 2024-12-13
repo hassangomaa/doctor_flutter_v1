@@ -143,33 +143,33 @@ class HealthRecordListViewItem extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
-            height: 10.r,
-          ),
-          Row(
-            children: [
-              CustomText(
-                text: AppText.treatmentPlan,
-                style: AppStyle.textStyle14BoldKufram,
-                textAlign: TextAlign.center,
-                maxLines: 100,
-                color: AppColor.blue,
-              ),
-              SizedBox(
-                width: 10.r,
-              ),
-              SizedBox(
-                width: 150.r,
-                child: CustomText(
-                  text: "${healthRecordModel.treatment_plan}",
-                  style: AppStyle.textStyle16RegularKufram,
-                  textAlign: TextAlign.center,
-                  maxLines: 100,
-                  color: AppColor.blue,
-                ),
-              ),
-            ],
-          ),
+          // SizedBox(
+          //   height: 10.r,
+          // ),
+          // Row(
+          //   children: [
+          //     CustomText(
+          //       text: AppText.treatmentPlan,
+          //       style: AppStyle.textStyle14BoldKufram,
+          //       textAlign: TextAlign.center,
+          //       maxLines: 100,
+          //       color: AppColor.blue,
+          //     ),
+          //     SizedBox(
+          //       width: 10.r,
+          //     ),
+          //     SizedBox(
+          //       width: 150.r,
+          //       child: CustomText(
+          //         text: "${healthRecordModel.treatment_plan}",
+          //         style: AppStyle.textStyle16RegularKufram,
+          //         textAlign: TextAlign.center,
+          //         maxLines: 100,
+          //         color: AppColor.blue,
+          //       ),
+          //     ),
+          //   ],
+          // ),
           SizedBox(
             height: 10.r,
           ),

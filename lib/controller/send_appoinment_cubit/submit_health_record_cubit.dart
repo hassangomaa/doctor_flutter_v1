@@ -25,7 +25,7 @@ class SubmitHealthRecordCubit extends Cubit<SubmitHealthRecordState> {
 
   final TextEditingController temperatureController = TextEditingController();
   final TextEditingController heartRateController = TextEditingController();
-  final TextEditingController treatmentPlanController = TextEditingController();
+  // final TextEditingController treatmentPlanController = TextEditingController();
   final TextEditingController notesController = TextEditingController();
   final TextEditingController workPlan = TextEditingController();
 
@@ -38,7 +38,7 @@ class SubmitHealthRecordCubit extends Cubit<SubmitHealthRecordState> {
       bloodPressure: bloodPressureController.text,
       temperature: double.tryParse(temperatureController.text) ?? 0.0,
       heartRate: double.tryParse(heartRateController.text) ?? 0.0,
-      treatmentPlan: treatmentPlanController.text,
+      // treatmentPlan: treatmentPlanController.text,
       breathRate: breathRate.text,
       note: notesController.text,
       lat: lat < 0 ? lat * -1 : lat,
@@ -76,7 +76,7 @@ class SubmitHealthRecordCubit extends Cubit<SubmitHealthRecordState> {
     bloodPressureController.clear();
     temperatureController.clear();
     heartRateController.clear();
-    treatmentPlanController.clear();
+    // treatmentPlanController.clear();
   }
 
   List<File> file = [];

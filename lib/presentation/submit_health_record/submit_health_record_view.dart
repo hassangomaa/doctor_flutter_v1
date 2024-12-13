@@ -109,7 +109,7 @@ class _SubmitHealthRecordViewState extends State<SubmitHealthRecordView> {
                       },
                     ),
                     CustomTextFormFeild(
-                      text: 'breath rate',
+                      text: AppText.bearthRate,
                       controller:
                           SubmitHealthRecordCubit.get(context).breathRate,
                       validator: (value) {
@@ -135,19 +135,7 @@ class _SubmitHealthRecordViewState extends State<SubmitHealthRecordView> {
                         return null;
                       },
                     ),
-                    CustomTextFormFeild(
-                      text: AppText.notes,
-                      controller:
-                          SubmitHealthRecordCubit.get(context).notesController,
-                      keyboardType: TextInputType.text,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'note is required';
-                        }
-
-                        return null;
-                      },
-                    ),
+                   
                     const CustomDatePickerTextField(),
                     // CustomTextFormFeild(
                     //   text: AppText.treatmentPlan,
@@ -168,6 +156,19 @@ class _SubmitHealthRecordViewState extends State<SubmitHealthRecordView> {
                         if (value == null || value.isEmpty) {
                           return 'workPlan plan is required';
                         }
+                        return null;
+                      },
+                    ),
+                     CustomTextFormFeild(
+                      text: AppText.notes,
+                      controller:
+                          SubmitHealthRecordCubit.get(context).notesController,
+                      keyboardType: TextInputType.text,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'note is required';
+                        }
+
                         return null;
                       },
                     ),
