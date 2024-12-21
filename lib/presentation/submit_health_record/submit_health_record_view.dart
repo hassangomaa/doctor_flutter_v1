@@ -182,9 +182,9 @@ class _SubmitHealthRecordViewState extends State<SubmitHealthRecordView> {
                         // style: ElevatedButton.styleFrom(),
                         title: AppText.send,
                         onPressed: () {
-                          if (!_formKey.currentState!.validate()) {
-                            return;
-                          }
+                          // if (!_formKey.currentState!.validate()) {
+                          //   return;
+                          // }
                           SubmitHealthRecordCubit.get(context)
                               .submitHealthRecord(
                             position?.latitude ?? 0.0,

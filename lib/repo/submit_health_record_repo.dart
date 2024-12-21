@@ -14,15 +14,15 @@ import '../model/submit_health_record_response_model/submit_health_record_respon
 
 abstract class SubmitHealthRecordRepo {
   Future<Either<Failures, SubmitHealthRecordResponseModel>> submitHealthRecord({
-    required String bloodPressure,
-    required num temperature,
-    required num heartRate,
+     String ?bloodPressure,
+     num ?temperature,
+     num ?heartRate,
     // required String treatmentPlan,
-    required double lat,
-    required double long,
-    required String breathRate,
-    required String note,
-    required String walkPlan,
+     double? lat,
+     double ?long,
+     String ?breathRate,
+     String ?note,
+     String ?walkPlan,
   });
 
   Future<Either<Failures, String>> uploadFile(List<File> file, int id);
@@ -31,15 +31,19 @@ abstract class SubmitHealthRecordRepo {
 class SubmitHealthRecordRepoImp extends SubmitHealthRecordRepo {
   @override
   Future<Either<Failures, SubmitHealthRecordResponseModel>> submitHealthRecord({
-    required String bloodPressure,
-    required num temperature,
-    required num heartRate,
+     String 
+     
+     
+     
+     ? bloodPressure,
+     num ?temperature,
+     num ?heartRate,
     // required String treatmentPlan,
-    required double lat,
-    required double long,
-    required String breathRate,
-    required String note,
-    required String walkPlan,
+     double? lat,
+     double ?long,
+     String ?breathRate,
+     String ?note,
+     String ?walkPlan,
   }) async {
     try {
       Response response = await DioHelper.postData(

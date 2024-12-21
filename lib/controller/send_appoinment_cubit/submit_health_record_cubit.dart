@@ -35,15 +35,15 @@ class SubmitHealthRecordCubit extends Cubit<SubmitHealthRecordState> {
   submitHealthRecord(double lat, double long) async {
     emit(SubmitHealthRecordLoadingState());
     final result = await _repo.submitHealthRecord(
-      bloodPressure: bloodPressureController.text,
-      temperature: double.tryParse(temperatureController.text) ?? 0.0,
-      heartRate: double.tryParse(heartRateController.text) ?? 0.0,
+      bloodPressure: bloodPressureController.text  == '' ? 0.toString() : bloodPressureController.text,
+      temperature: double.tryParse(temperatureController.text) ?? 0,
+      heartRate: double.tryParse(heartRateController.text) ?? 0,
       // treatmentPlan: treatmentPlanController.text,
-      breathRate: breathRate.text,
-      note: notesController.text,
+      breathRate: breathRate.text == '' ? 0.toString() : breathRate.text,
+      note: notesController.text == '' ? null : notesController.text,
       lat: lat < 0 ? lat * -1 : lat,
       long: long < 0 ? long * -1 : long,
-      walkPlan: workPlan.text,
+      walkPlan: workPlan.text == '' ? 0.toString() : workPlan.text,
     );
 
     result.fold((l) {

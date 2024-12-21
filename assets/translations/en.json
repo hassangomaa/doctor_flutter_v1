@@ -3,6 +3,7 @@
   "doctor": "Doctor",
   "patient": "Patient",
   "family": "Family",
+  "SelectContact" : "Select Contact",
   "password": "Password",
   "name": "Name",
   "walkplan":"Daily Walking Rate",
