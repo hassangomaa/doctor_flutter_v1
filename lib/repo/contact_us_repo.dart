@@ -35,8 +35,8 @@ class ContactUsRepoImpl implements ContactUsRepo {
           "user_id": userId,
           // "name": name,
           // "email": email,
-          "subject": title,
-          "message": message,
+          "subject": message,
+          "message": title,
         },
       );
       log(response.data.toString());

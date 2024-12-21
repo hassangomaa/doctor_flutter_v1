@@ -80,9 +80,9 @@ class ContactUsView extends StatelessWidget {
                     controller: CountactUsCubit.get(context).messageController,
                     text: AppText.description,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return context.tr(AppText.pleaseEnterDescription);
-                      }
+                      // if (value == null || value.isEmpty) {
+                      //   return context.tr(AppText.pleaseEnterDescription);
+                      // }
                       return null;
                     },
                   ),
