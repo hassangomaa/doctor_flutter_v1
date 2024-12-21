@@ -41,6 +41,9 @@ class CountactUsSendButton extends StatelessWidget {
           return CustomElevatedButton(
             title: AppText.send,
             onPressed: () {
+              if (!CountactUsCubit.get(context).formKey.currentState!.validate()) {
+                return;
+              }
               CountactUsCubit.get(context).sendMessage(
                 doctorId,
               );

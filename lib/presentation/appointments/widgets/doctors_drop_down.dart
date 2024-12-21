@@ -38,7 +38,7 @@ class _DoctorNamesDropDownState extends State<DoctorNamesDropDown> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomText(
-                text: "SelectDocotor",
+                text: "SelectContact",
                 color: AppColor.blue,
                 style: AppStyle.textStyle14RegularKufram,
               ),

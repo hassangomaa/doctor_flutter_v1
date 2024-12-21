@@ -93,7 +93,7 @@ class _SubmitHealthRecordViewState extends State<SubmitHealthRecordView> {
           builder: (context, state) {
             return SafeArea(
               child: Form(
-                // key: _formKey, // Attach the form key for validation
+                 key: _formKey, // Attach the form key for validation
                 child: ListView(
                   padding: const EdgeInsets.all(16.0),
                   children: [
@@ -182,6 +182,9 @@ class _SubmitHealthRecordViewState extends State<SubmitHealthRecordView> {
                         // style: ElevatedButton.styleFrom(),
                         title: AppText.send,
                         onPressed: () {
+                          if (!_formKey.currentState!.validate()) {
+                            return;
+                          }
                           SubmitHealthRecordCubit.get(context)
                               .submitHealthRecord(
                             position?.latitude ?? 0.0,
